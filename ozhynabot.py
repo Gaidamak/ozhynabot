@@ -64,7 +64,7 @@ def send_message(text, chat_id):
 
 
 def send_document(document, chat_id):
-    document = urllib.parse.quote(text)
+    document = urllib.parse.quote(document)
     url = URL + "sendDocument?chat_id={}&document={}".format(chat_id, document)
     get_url(url)
 
