@@ -42,8 +42,8 @@ def echo_all(updates):
         chat = update["message"]["chat"]["id"]
         if text == 'malina':
             send_message('Ne sezon, dyadya', chat)
-        #elif text == 'grusha':
-        #    send_document(chat)
+        elif text == 'grusha':
+            send_document(chat)
         else:
             send_message(text, chat)
 
@@ -62,10 +62,10 @@ def send_message(text, chat_id):
     get_url(url)
 
 
-#def send_document(chat_id):
-#   video = urllib.parse.quote(video)
-#    url = URL + "sendDocument?chat_id={}&video={}".format(chat_id, 'http://gph.is/1IHIBU3')
-#    get_url(url)
+def send_document(chat_id):
+    #video = urllib.parse.quote(video)
+    url = URL + "sendDocument?chat_id={}&video={}".format(chat_id, 'http://gph.is/1IHIBU3')
+    get_url(url)
 
 
 
