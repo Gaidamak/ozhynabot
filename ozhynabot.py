@@ -24,11 +24,12 @@ class BotHandler:
         get_result = self.get_updates()
 
         if len(get_result) > 0:
-            last_update = get_result[-1]
+             last_update = get_result[-1]
         else:
             last_update = get_result[len(get_result)]
 
         return last_update
+
 
 greet_bot = BotHandler('473588601:AAFxZPg3l_HcwESu72G2mAgYzIp9qmEqf8U')
 greetings = ('hello', 'hi', 'greetings', 'sup')
