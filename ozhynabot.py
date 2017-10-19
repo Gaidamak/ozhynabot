@@ -38,14 +38,15 @@ def get_last_update_id(updates):
 
 def echo_all(updates):
     for update in updates["result"]:
-        text = update["message"]["text"]
-        chat = update["message"]["chat"]["id"]
-        if text == 'malina':
-            send_message('Ne sezon, dyadya', chat)
-        #elif text == 'grusha':
-        #    send_document(chat)
-        else:
-            send_message(text, chat)
+        send_message(update, '174727677')
+        # text = update["message"]["text"]
+        # chat = update["message"]["chat"]["id"]
+        # if text == 'malina':
+        #     send_message('Ne sezon, dyadya', chat)
+        # #elif text == 'grusha':
+        # #    send_document(chat)
+        # else:
+        #     send_message(text, chat)
 
 
 def get_last_chat_id_and_text(updates):
