@@ -38,7 +38,7 @@ def get_last_update_id(updates):
 
 def echo_all(updates):
     for update in updates["result"]:
-        send_message(update, '174727677')
+        print(update)
         # text = update["message"]["text"]
         # chat = update["message"]["chat"]["id"]
         # if text == 'malina':
