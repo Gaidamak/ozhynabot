@@ -44,6 +44,8 @@ def echo_all(updates):
             send_message('Ne sezon, dyadya', chat)
         elif text == 'grusha':
             send_document(chat)
+        elif text == 'lisichki':
+            send_document(chat)
         else:
             send_message(text, chat)
 
