@@ -64,7 +64,7 @@ def send_message(text, chat_id):
 
 def send_document(chat_id):
     #video = urllib.parse.quote(video)
-    url = URL + "sendDocument?chat_id={}&video={}".format(chat_id, 'http://gph.is/1IHIBU3')
+    url = URL + "sendDocument?chat_id={}&video=http://gph.is/1IHIBU3".format(chat_id)
     get_url(url)
 
 
