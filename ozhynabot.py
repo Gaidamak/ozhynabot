@@ -40,9 +40,9 @@ def echo_all(updates):
     for update in updates["result"]:
         text = update["message"]["text"]
         chat = update["message"]["chat"]["id"]
-        if text == "maline"
+        if text == 'malina':
             send_message("Ne sezon, dyadya", chat)
-        else
+        else:
             send_message(text, chat)
 
 
