@@ -1,1 +1,1 @@
-web: python ozhynabot.py
+worker: python ozhynabot.py
