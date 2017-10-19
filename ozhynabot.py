@@ -40,7 +40,10 @@ def echo_all(updates):
     for update in updates["result"]:
         text = update["message"]["text"]
         chat = update["message"]["chat"]["id"]
-        send_message(text, chat)
+        if text == "малина"
+            send_message("Не сезон, дядя", chat)
+        else
+            send_message(text, chat)
 
 
 def get_last_chat_id_and_text(updates):
