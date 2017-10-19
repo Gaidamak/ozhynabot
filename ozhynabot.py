@@ -40,7 +40,7 @@ def echo_all(updates):
     for update in updates["result"]:
         text = update["message"]["text"]
         chat = update["message"]["chat"]["id"]
-        document = "http://gph.is/1IHIBU3"
+        document = 'http://gph.is/1IHIBU3'
         if text == 'malina':
             send_message("Ne sezon, dyadya", chat)
         elif text == 'grusha':
