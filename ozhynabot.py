@@ -40,8 +40,11 @@ def echo_all(updates):
     for update in updates["result"]:
         text = update["message"]["text"]
         chat = update["message"]["chat"]["id"]
+        document = "http://gph.is/1IHIBU3"
         if text == 'malina':
             send_message("Ne sezon, dyadya", chat)
+        elif text == 'grusha':
+            send_document(document, chat)
         else:
             send_message(text, chat)
 
@@ -58,6 +61,13 @@ def send_message(text, chat_id):
     text = urllib.parse.quote(text)
     url = URL + "sendMessage?text={}&chat_id={}".format(text, chat_id)
     get_url(url)
+
+
+def send_document(document, chat_id):
+    document = urllib.parse.quote(text)
+    url = URL + "sendDocument?chat_id={}&document={}".format(chat_id, document)
+    get_url(url)
+
 
 
 def main():
