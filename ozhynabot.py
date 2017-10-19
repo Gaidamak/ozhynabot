@@ -46,6 +46,8 @@ def echo_all(updates):
             send_document(chat)
         elif text == 'lisichki':
             send_document(chat)
+        elif text == '/start':
+            send_document_hello(chat)
         else:
             send_message(text, chat)
 
@@ -67,6 +69,12 @@ def send_message(text, chat_id):
 def send_document(chat_id):
     #video = urllib.parse.quote(video)
     url = URL + "sendVideo?chat_id={}&video=https://media.giphy.com/media/ur6Eqdu0WIeiI/giphy.gif".format(chat_id)
+    get_url(url)
+
+
+def send_document_hello(chat_id):
+    #video = urllib.parse.quote(video)
+    url = URL + "sendVideo?chat_id={}&video=https://media.giphy.com/media/xT9IgmYU3ZVaCjGafm/giphy.gif".format(chat_id)
     get_url(url)
 
 
