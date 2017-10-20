@@ -82,7 +82,7 @@ def send_document(chat_id):
 
 def send_message_hello(chat_id):
     #video = urllib.parse.quote(video)
-    keyboard = '[[text:січень]]'
+    keyboard = [[text='січень']]
     url = URL + "sendMessage?text='Оберіть місяць:'chat_id={}&inline_keyboard={}".format(chat_id, keyboard)
     get_url(url)
 
