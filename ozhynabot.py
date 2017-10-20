@@ -47,15 +47,15 @@ def echo_all(updates):
         text = update['message']['text']
         chat = update["message"]["chat"]["id"]
         if text == 'січень':
-            send_message('```Цикорій '
+            send_message('Цикорій '
                          'савойська капуста,'
                          'червона капуста,'
                          'брюссельська капуста,'
-                         'білокачанна капуста, цибуля-шалот, цибуля-порей, ріпа, артишок, пастернак, грейпфрут, лимон, апельсин, мандарин, груша, айва, хурма, гливи```', chat)
+                         'білокачанна капуста, цибуля-шалот, цибуля-порей, ріпа, артишок, пастернак, грейпфрут, лимон, апельсин, мандарин, груша, айва, хурма, гливи', chat)
         elif text == 'груша':
             send_document(chat)
-        elif text == 'lisichki':
-            send_document(chat)
+        elif text == '/start':
+            send_message_hello(chat)
         else:
             send_message(text, chat)
 
@@ -79,6 +79,12 @@ def send_document(chat_id):
     url = URL + "sendVideo?chat_id={}&video=https://media.giphy.com/media/ur6Eqdu0WIeiI/giphy.gif".format(chat_id)
     get_url(url)
 
+
+def send_message_hello(chat_id):
+    #video = urllib.parse.quote(video)
+    keyboard = '[[text:січень]]'
+    url = URL + "sendMessage?text='Оберіть місяць:'chat_id={}&inline_keyboard={}".format(chat_id, keyboard)
+    get_url(url)
 
 
 def main():
