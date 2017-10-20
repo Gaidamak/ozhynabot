@@ -27,23 +27,26 @@ def get_json_from_url(url):
     return js
 
 
-def get_updates():
+def get_updates(offset=None):
     url = URL + "getUpdates"
+    if offset:
+        url += "?offset={}".format(offset)
     js = get_json_from_url(url)
     return js
 
 
 def get_last_update_id(updates):
     update_ids = []
-    for update in updates['result']:
-        update_ids.append(int(update['update_id']))
+    for update in updates["result"]:
+        update_ids.append(int(update["update_id"]))
     return max(update_ids)
 
 
 def echo_all(updates):
     for update in updates['result']:
-        text = update['message']['text']
-        chat = update['message']['chat']['id']
+    	try:
+        	text = update['message']['text']
+        	chat = update['message']['chat']['id']
         if text == 'січень':
             send_message('Цикорій, савойська капуста, червона капуста, брюссельська капуста, білокачанна капуста, цибуля-шалот, цибуля-порей, ріпа, артишок, пастернак, грейпфрут, лимон, апельсин, мандарин, груша, айва, хурма, гливи', chat)
         elif text == 'лютий':
