@@ -47,11 +47,7 @@ def echo_all(updates):
         text = update['message']['text']
         chat = update["message"]["chat"]["id"]
         if text == 'січень':
-            send_message('/Цикорій '
-                         'савойська капуста,'
-                         'червона капуста,'
-                         'брюссельська капуста,'
-                         'білокачанна капуста, цибуля-шалот, цибуля-порей, ріпа, артишок, пастернак, грейпфрут, лимон, апельсин, мандарин, груша, айва, хурма, гливи', chat)
+            send_message('Цикорій, савойська капуста, червона капуста, брюссельська капуста, білокачанна капуста, цибуля-шалот, цибуля-порей, ріпа, артишок, пастернак, грейпфрут, лимон, апельсин, мандарин, груша, айва, хурма, гливи', chat)
         elif text == 'груша':
             send_document(chat)
         elif text == '/start':
@@ -70,7 +66,7 @@ def get_last_chat_id_and_text(updates):
 
 def send_message(text, chat_id):
     text = urllib.parse.quote(text)
-    url = URL + "sendMessage?text={}&parse_mode=HTML&chat_id={}".format(text, chat_id)
+    url = URL + "sendMessage?text={}&parse_mode=Markdown&chat_id={}".format(text, chat_id)
     get_url(url)
 
 
