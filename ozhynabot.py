@@ -46,8 +46,8 @@ def echo_all(updates):
     for update in updates["result"]:
         text = update['message']['text']
         chat = update["message"]["chat"]["id"]
-        if text == 'malina':
-            send_message('Ne sezon, dyadya', chat)
+        if text == 'cічень':
+            send_message('Цикорій, савойська капуста, червона капуста, брюссельська капуста, білокачанна капуста, цибуля- шалот, цибуля-порей, ріпа, артишоки, пастернак, грейпфрути, лимони, апельсини, мандарини, груші, айва, хурма, гливи.', chat)
         elif text == 'груша':
             send_document(chat)
         elif text == 'lisichki':
