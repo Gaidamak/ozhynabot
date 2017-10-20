@@ -73,7 +73,7 @@ def echo_all(updates):
         elif text == '/start':
             send_message_hello(chat)
         else:
-            send_message(text, chat)
+            send_message('https://macpaw.com/jobs', chat)
 
 
 def get_last_chat_id_and_text(updates):
