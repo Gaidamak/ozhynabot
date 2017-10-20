@@ -44,7 +44,7 @@ def get_last_update_id(updates):
 
 def echo_all(updates):
     for update in updates['result']:
-        text = update['message']['text']
+        text = update["message"["text"]
         chat = update['message']['chat']['id']
         if text == 'січень':
             send_message('Цикорій, савойська капуста, червона капуста, брюссельська капуста, білокачанна капуста, цибуля-шалот, цибуля-порей, ріпа, артишок, пастернак, грейпфрут, лимон, апельсин, мандарин, груша, айва, хурма, гливи', chat)
