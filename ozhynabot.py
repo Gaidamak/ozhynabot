@@ -47,7 +47,7 @@ def echo_all(updates):
         text = update['message']['text']
         chat = update["message"]["chat"]["id"]
         if text == 'січень':
-            send_message('/Цикорій,'
+            send_message('Цикорій/n'
                          'савойська капуста,'
                          'червона капуста,'
                          'брюссельська капуста,'
