@@ -27,10 +27,8 @@ def get_json_from_url(url):
     return js
 
 
-def get_updates(offset=None):
-    url = URL + 'getUpdates'
-    if offset:
-        url += '?offset={}'.format(offset)
+def get_updates():
+    url = URL + "getUpdates"
     js = get_json_from_url(url)
     return js
 
