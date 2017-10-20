@@ -1,7 +1,12 @@
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+
 import json
 import requests
 import time
 import urllib
+
+
 
 
 
@@ -42,7 +47,7 @@ def echo_all(updates):
         chat = update["message"]["chat"]["id"]
         if text == 'malina':
             send_message('Ne sezon, dyadya', chat)
-        elif text == 'grusha':
+        elif text == 'груша':
             send_document(chat)
         elif text == 'lisichki':
             send_document(chat)
