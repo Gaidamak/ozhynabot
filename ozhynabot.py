@@ -43,7 +43,7 @@ def get_last_update_id(updates):
 
 
 def echo_all(updates):
-    for update in updates["result"]:
+    for update in updates['result']:
         text = update['message']['text']
         chat = update["message"]["chat"]["id"]
         if text == 'січень':
